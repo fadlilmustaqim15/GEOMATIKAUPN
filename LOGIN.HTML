@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Login Geomatika</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('LOGOUPN.PNG') center center no-repeat;
+    background-size: 500px;
+    background-color: #f8f9fa;
+}
+.overlay {
+    background-color: rgba(255,255,255,0.9);
+    padding: 30px;
+    border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay text-center shadow">
+    <img src="LOGOPRODI.PNG" width="90">
+    <h5 class="fw-bold mt-2">Teknik Geomatika UPN “Veteran” Yogyakarta</h5>
+
+    <input type="text" id="nama" class="form-control my-3" placeholder="Masukkan nama">
+    <button class="btn btn-primary w-100" onclick="login()">Masuk</button>
+</div>
+
+<script>
+function login() {
+    let nama = document.getElementById("nama").value;
+
+    if(nama === ""){
+        alert("Masukkan nama dulu!");
+    } else {
+        localStorage.setItem("namaUser", nama);
+        window.location.href = "index.html";
+    }
+}
+</script>
+
+</body>
+</html>

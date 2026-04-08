@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>KBK Fotogrametri</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body {display:flex;flex-direction:column;min-height:100vh;
+background:url('LOGOUPN.PNG') center no-repeat;background-size:500px;}
+.overlay{background:rgba(255,255,255,0.9);}
+</style>
+</head>
+
+<body>
+
+<div class="bg-warning text-center py-3">
+<h2>KBK Fotogrametri</h2>
+</div>
+
+<div class="container overlay p-3 mt-4 flex-grow-1">
+<img src="FOTOGRAMETRI.PNG" class="img-fluid mb-3">
+
+<p>
+KBK Fotogrametri memanfaatkan foto udara atau citra untuk menghasilkan peta.
+Data biasanya diperoleh dari drone atau pesawat.
+</p>
+
+<p>
+Dengan teknik ini, suatu wilayah dapat dipetakan secara detail tanpa harus
+melakukan pengukuran langsung di seluruh area.
+</p>
+
+<a href="index.html" class="btn btn-primary">Kembali</a>
+</div>
+
+<div class="bg-warning text-center py-3">
+<button class="btn btn-danger btn-sm" onclick="logout()">Logout</button>
+</div>
+
+<script>
+function logout(){
+localStorage.removeItem("namaUser");
+window.location.href="login.html";
+}
+</script>
+
+</body>
+</html>
